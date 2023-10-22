@@ -34,8 +34,8 @@ export class HomeComponent implements OnInit {
       .string()
       .required('Họ và tên không được để trống')
       .min(10, 'Họ và Tên phải nhiều hơn 10 ký tự')
-      .max(100, 'Họ và Tên không được quá 100 ký tự')
-      .matches(/^[a-zA-Z\s]+$/, 'Họ và tên chưa đúng định dạng'),
+      .max(100, 'Họ và Tên không được quá 100 ký tự'),
+      // .matches(/^[a-zA-Z\s]+$/, 'Họ và tên chưa đúng định dạng'),
     // .minLength(10,'Tên phải nhiều hơn 10 ký tự')
     // .trim('Tên không được để khoảng trắng'),
     email: yup
@@ -49,7 +49,7 @@ export class HomeComponent implements OnInit {
     loanPayMust: yup
       .number()
       .required('* Số tiền vay không được để trống')
-      .min(20000000, '*Số tiền vay phải lớn hơn 20 triệu')
+      .min(10000, '*Số tiền vay phải lớn hơn 10000')
       .max(100000000000, '* Số tiền vay phải nhỏ hơn 1 tỷ'),
   });
   myForm = FormGroup;
