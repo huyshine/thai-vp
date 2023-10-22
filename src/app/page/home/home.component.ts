@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 import { RegisterService } from 'src/app/services/register.service';
 import { ToastService } from 'angular-toastify';
 import * as yup from 'yup';
+import { Location } from '@angular/common';
 
 @Component({
   selector: 'app-home',
@@ -35,8 +36,8 @@ export class HomeComponent implements OnInit {
       .min(10, 'Họ và Tên phải nhiều hơn 10 ký tự')
       .max(100, 'Họ và Tên không được quá 100 ký tự')
       .matches(/^[a-zA-Z\s]+$/, 'Họ và tên chưa đúng định dạng'),
-      // .minLength(10,'Tên phải nhiều hơn 10 ký tự')
-      // .trim('Tên không được để khoảng trắng'),
+    // .minLength(10,'Tên phải nhiều hơn 10 ký tự')
+    // .trim('Tên không được để khoảng trắng'),
     email: yup
       .string()
       .required('Email Không được để trống')
@@ -51,58 +52,34 @@ export class HomeComponent implements OnInit {
       .min(20000000, '*Số tiền vay phải lớn hơn 20 triệu')
       .max(100000000000, '* Số tiền vay phải nhỏ hơn 1 tỷ'),
   });
+  myForm = FormGroup;
 
   constructor(
     private registerService: RegisterService,
     private router: Router,
-    // private fb: FormBuilder,
-    private toastService: ToastService
+    private fb: FormBuilder,
+    private toastService: ToastService,
+    private location: Location
   ) {}
   onSubmit() {
-    this.schema.validate(this.credentials).then(() => {
-      this.registerService.regiser(this.credentials).subscribe(
-        (response) => {
-          console.log(response);
-          // localStorage.setItem('token', response.token);
-          this.toastService.success('Đăng ký thành công');
-
-          setTimeout(() => {
-            this.router.navigate(['/']);
-          }, 500);
-
-        },
-        (errors) => {            
-          this.toastService.error(errors?.error?.errors?.vpBankCustomer);
-        }
-      );
-    })
-    .catch((errors) => {
-      this.toastService.error(errors);
-    });;
-    // if (errors.length > 0) {
-    //   // this.toastService.error(errors[0]);
-    //   console.log(errors , "Error");
-    // } else {
-    //   try {
-    //     this.registerService.regiser(this.credentials).subscribe(
-    //       (response) => {
-    //         console.log(response);
-    //         // localStorage.setItem('token', response.token);
-    //         this.toastService.success('Đăng ký thành công');
-
-    //         setTimeout(() => {
-    //           this.router.navigate(['/']);
-    //         }, 500);
-
-    //       },
-    //       (errors) => {            
-    //         this.toastService.error(errors?.error?.errors?.vpBankCustomer);
-    //       }
-    //     );
-    //   } catch (error) {
-    //     console.log(error);
-    //   }
-    // }
+    this.schema
+      .validate(this.credentials)
+      .then(() => {
+        this.registerService.regiser(this.credentials).subscribe(
+          (response) => {
+            this.toastService.success('Đăng ký thành công');
+            setTimeout(() => {
+              window.location.reload();
+            }, 2000);
+          },
+          (errors) => {
+            this.toastService.error(errors?.error?.errors?.vpBankCustomer);
+          }
+        );
+      })
+      .catch((errors) => {
+        this.toastService.error(errors);
+      });
   }
 
   status = false;
