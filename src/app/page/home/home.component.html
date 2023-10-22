@@ -1,0 +1,1255 @@
+<main
+  class="w-full z-[0] relative min-h-[100vh] bg-cover bg-repeat-round 600:bg-banner pb-[30px] max-641:bg-moblie-banner"
+>
+  <header>
+    <section
+      class="section-header 1050:w-[1050px] mx-auto 960:pt-[24px] flex justify-between items-center max-960:w-full max-960:pt-[27.2px] max-960:px-[20.4px]"
+    >
+      <div class="logo">
+        <img
+          class="960:w-[200px] 960:h-[48px] 900:w-[180px] max-900:w-auto max-900:h-[32px]"
+          src="https://vayonline.vpbank.com.vn/images/7325bfc8cf33275ad55eb47d1e0ae245.png"
+          alt=""
+        />
+      </div>
+      <div class="menu">
+        <img
+          class="mobile-logo-menu hidden max-900:block max-480:w-[40px]"
+          src="https://vayonline.vpbank.com.vn/images/d2b3bed6c26844272b18b034d883ebf5.svg"
+          alt=""
+        />
+        <a
+          routerLink=""
+          class="text-white cursor-pointer leading-[17px] max-900:hidden ml-[50px] font-GilroyLine font-[500] text-[16px]"
+          >Bảo hiểm khoản vay</a
+        >
+        <a
+          routerLink=""
+          class="text-white cursor-pointer leading-[17px] max-900:hidden ml-[50px] font-GilroyLine font-[500] text-[16px]"
+          >Các câu hỏi thường gặp</a
+        >
+      </div>
+    </section>
+  </header>
+  <div class="content">
+    <section class="section-banner-form 480:mt-[57px] max-480:mt-[30px]">
+      <div class="max-w-[1050px] mx-auto">
+        <div
+          class="banner-form-conten flex justify-between max-900:flex-wrap items-center text-white max-900:px-[24px] max-480:px-[15px] 600:mt-[55px] max-480:mt-[20px]"
+        >
+          <div class="form-left 900:mt-[112px] text-right max-900:w-full">
+            <div class="form-left-title">
+              <h2
+                class="font-GilroyBold 1060:text-[64px] 900:text-[60px] 600:text-[72px] 480:text-[48px] max-600:leading-[50px] leading-[67px] max-480:text-[35px]"
+              >
+                Vay tiền nhanh
+              </h2>
+              <h2
+                class="font-GilroyLine 1060:text-[64px] 900:text-[60px] 600:text-[72px] 480:text-[48px] max-600:leading-[50px] leading-[67px] max-480:text-[35px]"
+              >
+                Online
+              </h2>
+            </div>
+            <p
+              class="600:mt-[24px] 600:leading-[32px] 1060:text-[20px] 900:text-[21px] 600:text-[24px] max-480:text-[14px] 480:mb-[30px] max-480:mb-[60px] 480:text-[18px] 480:mt-[21px] max-480:mt-[5px] max-600:leading-[32px] font-GilroyLine"
+            >
+              Không thế chấp tài sản <br />
+              Thủ tục đơn giản, nhận tiền nhanh chóng
+            </p>
+          </div>
+          <div class="form-right relative max-900:w-full">
+            <form
+              (ngSubmit)="onSubmit()"
+              acceptCharset="UTF-8"
+              id="formAcount"
+              class="pt-[32px] h-auto min-h-[534px] text-center 900:w-[420px] text-[#343434] px-[24px] max-480:px-[15px] rounded-[24px] bg-white relative shadow-[0px_10px_50px_rgba(0,0,0,0.2),inset_0px_4px_0px_#fbea58]"
+            >
+              <p
+                class="form-title bg-clip-text leading-[47px] mb-[35px] font-GilroyBold font-[700] text-[24px] max-480:text-[20px] text-center block text-transparent bg-gradient-to-r from-blue-600 via-transparent to-green-400"
+                style="
+                  background-image: linear-gradient(
+                    89.21deg,
+                    rgb(38, 60, 135) 10.58%,
+                    rgb(1, 176, 85) 93.7%
+                  );
+                "
+              >
+                ĐĂNG KÝ KHOẢN VAY
+              </p>
+              <lib-toastify-toast-container
+                [position]="'top-right'"
+              ></lib-toastify-toast-container>
+
+              <div class="input-container flex flex-wrap">
+                <div class="wrap-input w-full relative mb-[27px]">
+                  <p
+                    class="sub-title-input absolute top-[-7px] px-[2.5px] left-[13px] text-[#000000] text-[12px] bg-white font-GilroyLine max-480:text-[11px]"
+                  >
+                    Họ tên
+                  </p>
+                  <input
+                    class="w-full outline-blue-500 rounded-[10px] border-[#E6E6E6] border-[1px] text-[14px] h-[40px] px-[16px] max-480:text-[12px]"
+                    placeholder="Họ Tên"
+                    type="text"
+                    name="customerName"
+                    [(ngModel)]="credentials.customerName"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                </div>
+                <div class="wrap-input w-full relative mb-[27px]">
+                  <p
+                    class="sub-title-input absolute top-[-7px] px-[2.5px] left-[13px] text-[#000000] text-[12px] bg-white font-GilroyLine max-480:text-[11px]"
+                  >
+                    Email
+                  </p>
+                  <input
+                    class="w-full outline-blue-500 rounded-[10px] border-[#E6E6E6] border-[1px] text-[14px] h-[40px] px-[16px] max-480:text-[12px]"
+                    placeholder="Email"
+                    type="Email"
+                    [(ngModel)]="credentials.email"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                </div>
+                <div
+                  class="wrap-input w-[calc(50%-8px)] mr-[8px] relative mb-[27px]"
+                >
+                  <p
+                    class="sub-title-input absolute top-[-7px] px-[2.5px] left-[13px] text-[#000000] text-[12px] bg-white font-GilroyLine max-480:text-[11px]"
+                  >
+                    Số điện thoại
+                  </p>
+                  <input
+                    class="w-full outline-blue-500 rounded-[10px] border-[#E6E6E6] border-[1px] text-[14px] h-[40px] px-[16px] max-480:text-[12px]"
+                    placeholder="Số điện thoại"
+                    type="srting"
+                    name="phoneNumber"
+                    [(ngModel)]="credentials.phoneNumber"
+                    [ngModelOptions]="{ standalone: true }"
+                  />
+                </div>
+                <div
+                  class="wrap-input w-[calc(50%-8px)] ml-[8px] relative mb-[27px]"
+                >
+                  <p
+                    class="sub-title-input absolute top-[-7px] px-[2.5px] left-[13px] text-[#000000] text-[12px] bg-white font-GilroyLine max-480:text-[11px]"
+                  >
+                    Thành phố
+                  </p>
+                  <select
+                    name="country"
+                    [(ngModel)]="credentials.country"
+                    [ngModelOptions]="{ standalone: true }"
+                    id=""
+                    class="w-full outline-blue-500 rounded-[10px] border-[#E6E6E6] border-[1px] text-[14px] h-[40px] px-[10px] max-480:text-[12px]"
+                  >
+                    <option value="An Giang">An Giang</option>
+                    <option value="Bà Rịa - Vũng Tàu">Bà Rịa - Vũng Tàu</option>
+                    <option value="Bắc Giang">Bắc Giang</option>
+                    <option value="Bắc Kạn">Bắc Kạn</option>
+                    <option value="Bạc Liêu">Bạc Liêu</option>
+                    <option value="Bắc Ninh">Bắc Ninh</option>
+                    <option value="Bến Tre">Bến Tre</option>
+                    <option value="Bình Định">Bình Định</option>
+                    <option value="Bình Dương">Bình Dương</option>
+                    <option value="Bình Phước">Bình Phước</option>
+                    <option value="Bình Thuận">Bình Thuận</option>
+                    <option value="Bình Thuận">Bình Thuận</option>
+                    <option value="Cà Mau">Cà Mau</option>
+                    <option value="Cao Bằng">Cao Bằng</option>
+                    <option value="Đắk Lắk">Đắk Lắk</option>
+                    <option value="Đắk Nông">Đắk Nông</option>
+                    <option value="Điện Biên">Điện Biên</option>
+                    <option value="Đồng Nai">Đồng Nai</option>
+                    <option value="Đồng Tháp">Đồng Tháp</option>
+                    <option value="Đồng Tháp">Đồng Tháp</option>
+                    <option value="Gia Lai">Gia Lai</option>
+                    <option value="Hà Giang">Hà Giang</option>
+                    <option value="Hà Nội">Hà Nội</option>
+                    <option value="Hà Nam">Hà Nam</option>
+                    <option value="Hà Tĩnh">Hà Tĩnh</option>
+                    <option value="Hải Dương">Hải Dương</option>
+                    <option value="Hậu Giang">Hậu Giang</option>
+                    <option value="Hòa Bình">Hòa Bình</option>
+                    <option value="Hưng Yên">Hưng Yên</option>
+                    <option value="Khánh Hòa">Khánh Hòa</option>
+                    <option value="Kiên Giang">Kiên Giang</option>
+                    <option value="Kon Tum">Kon Tum</option>
+                    <option value="Lai Châu">Lai Châu</option>
+                    <option value="Lâm Đồng">Lâm Đồng</option>
+                    <option value="Lạng Sơn">Lạng Sơn</option>
+                    <option value="Lào Cai">Lào Cai</option>
+                    <option value="Long An">Long An</option>
+                    <option value="Nam Định">Nam Định</option>
+                    <option value="Nghệ An">Nghệ An</option>
+                    <option value="Ninh Bình">Ninh Bình</option>
+                    <option value="Ninh Thuận">Ninh Thuận</option>
+                    <option value="Phú Thọ">Phú Thọ</option>
+                    <option value="Quảng Bình">Quảng Bình</option>
+                    <option value="Quảng Bình">Quảng Bình</option>
+                    <option value="Quảng Ngãi">Quảng Ngãi</option>
+                    <option value="Quảng Ninh">Quảng Ninh</option>
+                    <option value="Quảng Trị">Quảng Trị</option>
+                    <option value="Sóc Trăng">Sóc Trăng</option>
+                    <option value="Sơn La">Sơn La</option>
+                    <option value="Tây Ninh">Tây Ninh</option>
+                    <option value="Thái Bình">Thái Bình</option>
+                    <option value="Thái Nguyên">Thái Nguyên</option>
+                    <option value="Thanh Hóa">Thanh Hóa</option>
+                    <option value="Thừa Thiên Huế">Thừa Thiên Huế</option>
+                    <option value="Tiền Giang">Tiền Giang</option>
+                    <option value="Trà Vinh">Trà Vinh</option>
+                    <option value="Tuyên Quang">Tuyên Quang</option>
+                    <option value="Vĩnh Long">Vĩnh Long</option>
+                    <option value="Vĩnh Phúc">Vĩnh Phúc</option>
+                    <option value="Yên Bái">Yên Bái</option>
+                    <option value="Phú Yên">Phú Yên</option>
+                    <option value="Tp.Cần Thơ">Tp.Cần Thơ</option>
+                    <option value="Tp.Đà Nẵng">Tp.Đà Nẵng</option>
+                    <option value="Tp.Hải Phòng">Tp.Hải Phòng</option>
+                    <option value="Tp.Hà Nội">Tp.Hà Nội</option>
+                    <option value="TP  HCM">TP HCM</option>
+                  </select>
+                </div>
+                <div
+                  class="wrap-input w-[calc(50%-8px)] mr-[8px] relative mb-[27px]"
+                >
+                  <p
+                    class="sub-title-input absolute top-[-7px] px-[2.5px] z-[3] left-[13px] text-[#000000] text-[12px] bg-white font-GilroyLine max-480:text-[11px]"
+                  >
+                    Số tiền vay
+                  </p>
+                  <div class="relative">
+                    <input
+                      class="w-full !text-left outline-blue-500 rounded-[10px] border-[#E6E6E6] border-[1px] text-[14px] h-[40px] px-[16px] max-480:text-[12px] text-[#343434] font-GilroyMedium"
+                      name="myInput"
+                      [defaultValue]="null"
+                      placeholder="VD: 50 000 000"
+                      [(ngModel)]="credentials.loanPayMust"
+                      [ngModelOptions]="{ standalone: true }"
+                      currencyMask
+                      [options]="{ prefix: '', thousands: ' ', precision: 0 }"
+                      type="text"
+                    />
+                    <span
+                      class="text-[14px] absolute top-[10px] right-[13px] bg-white pl-[5px]"
+                      >VND</span
+                    >
+                  </div>
+                </div>
+                <div class="wrap-input w-[calc(50%-8px)] ml-[8px] relative">
+                  <p
+                    class="sub-title-input absolute top-[-7px] px-[2.5px] left-[13px] text-[#000000] text-[12px] bg-white font-GilroyLine max-480:text-[11px]"
+                  >
+                    Hình thức thu nhập
+                  </p>
+                  <select
+                    name="income"
+                    id=""
+                    [(ngModel)]="credentials.giveSalaryType"
+                    [ngModelOptions]="{ standalone: true }"
+                    class="w-full text-[13px] outline-blue-500 rounded-[10px] border-[#E6E6E6] border-[1px] h-[40px] px-[10px] max-480:text-[12px]"
+                  >
+                    <option value="Chuyển Khoản" class="text-[13px]">
+                      Lương chuyển khoản
+                    </option>
+                    <option value="Tiền Mặt">Lương tiền mặt</option>
+                  </select>
+                </div>
+              </div>
+              <button
+                type="submit"
+                class="480:w-[260px] 390:w-[180px] m-auto h-[50px] mt-[24px] max-480:mt-[5px] rounded-[100px] leading-[21px] font-[700] text-white text-[20px] shadow-[0px_20px_40px_rgba(46,140,139,0.2)] max-390:text-[15px] max-390:w-[190px] max-390:h-[35px]"
+                style="
+                  background: linear-gradient(
+                    270deg,
+                    #00b74f -22.41%,
+                    #1d4289 108.33%
+                  );
+                "
+              >
+                ĐĂNG KÝ
+              </button>
+              <a
+                routerLink="/re-enter"
+                class="font-GilroyLine hover:text-[#23527c] hover:underline flex items-center justify-center mt-[32px] text-[18px] text-[#219653] mb-[32px] max-480:text-[14px] max-480:mt-[20px]"
+                >Bạn đã đăng ký ?</a
+              >
+            </form>
+            <div
+              class="absolute 900:top-[-13px] 900:left-[-43px] 600:top-[-54px] 600:left-[-15px] max-600:top-[-32px] max-600:left-[-13px] max-480:w-[64px]"
+            >
+              <img
+                src="	https://vayonline.vpbank.com.vn/images/72f12f2fa1c66797ad612fb32c96b512.svg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-step max-600:hidden">
+      <div class="step-content m-auto max-w-[1050px] mt-[48px] px-[24px]">
+        <p
+          class="step-title w-[321px] h-[69px] text-[#263C87] flex text-[22px] bg-[#FFED48] font-GilroyBold leading-[23px] ml-[2rem] rounded-[100px] items-center justify-center"
+        >
+          Đăng ký chỉ với 4 bước
+        </p>
+        <div class="step-content mt-[-16px] flex gap-[10px] max-900:flex-wrap">
+          <div
+            class="step-item rounded-[5px] max-900:w-[calc(50%-10px)] rounded-bl-[100px] items-center justify-evenly 900:px-[24px] rounded-tl-[100px] max-900:mr-[5px] w-[260px] h-[110px] flex shadow-[0px_10px_50px_rgba(0,0,0,0.2),inset_0px_4px_0px_#fbea58] bg-white"
+          >
+            <div
+              class="step-item-title text-[rgb(184,112,194)] text-[40px] font-GilroyBold leading-[20px] mr-[10px]"
+            >
+              1
+            </div>
+            <p class="steip-item-content">
+              <span
+                class="text-[rgb(184,112,194)] font-GilroyBold leading-[20px]"
+                >Đăng ký thông tin &</span
+              ><br />
+              <span class="font-GilroyLine">cung cấp CMND/CCCD</span>
+            </p>
+          </div>
+          <div
+            class="step-item rounded-[5px] max-900:w-[calc(50%-10px)] items-center justify-evenly 900:px-[24px] max-900:mr-[5px] w-[260px] h-[110px] flex shadow-[0px_10px_50px_rgba(0,0,0,0.2),inset_0px_4px_0px_#fbea58] bg-white"
+          >
+            <div
+              class="step-item-title text-[rgb(209,90,61)] text-[40px] font-GilroyBold leading-[20px] mr-[10px]"
+            >
+              2
+            </div>
+            <p class="steip-item-content">
+              <span class="text-[rgb(209,90,61)] font-GilroyBold leading-[20px]"
+                >Nhận cuộc gọi </span
+              ><br />
+              <span class="font-GilroyLine">tư vấn cung cấp CMND/CCCD</span>
+            </p>
+          </div>
+          <div
+            class="step-item rounded-[5px] max-900:w-[calc(50%-10px)] items-center justify-evenly 900:px-[24px] max-900:mr-[5px] w-[260px] h-[110px] flex shadow-[0px_10px_50px_rgba(0,0,0,0.2),inset_0px_4px_0px_#fbea58] bg-white"
+          >
+            <div
+              class="step-item-title text-[rgb(243,188,75)] text-[40px] font-GilroyBold leading-[20px] mr-[10px]"
+            >
+              3
+            </div>
+            <p class="steip-item-content">
+              <span
+                class="text-[rgb(243,188,75)] font-GilroyBold leading-[20px]"
+                >Phê duyệt</span
+              >
+              <span class="font-GilroyLine">
+                hồ sơ vay <br />trong vài phút</span
+              >
+            </p>
+          </div>
+          <div
+            class="step-item rounded-[5px] max-900:w-[calc(50%-10px)] rounded-br-[100px] items-center justify-evenly 900:px-[24px] rounded-tr-[100px] max-900:mr-[5px] w-[260px] h-[110px] flex shadow-[0px_10px_50px_rgba(0,0,0,0.2),inset_0px_4px_0px_#fbea58] bg-white"
+          >
+            <div
+              class="step-item-title text-[rgb(98,105,194)] text-[40px] font-GilroyBold leading-[20px] mr-[10px]"
+            >
+              4
+            </div>
+            <p class="steip-item-content">
+              <span
+                class="text-[rgb(98,105,194)] font-GilroyBold leading-[20px]"
+                >Giả ngân tự động</span
+              ><br />
+              <span class="font-GilroyLine">vào tài khoản của bạn</span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section
+      class="section-advantage relative mt-[70px] mx-auto overflow-x-hidden"
+    >
+      <div class="advantage-title uppercase m-auto">
+        <h2
+          class="m-auto 1050:w-[570px] text-[40px] bg-clip-text text-center font-[600] 480:text-[32px] max-390:text-[20px] max-390:font-GilroyBold 390:text-[24px] leading-[62px] text-transparent bg-gradient-to-r from-blue-600 via-transparent to-green-400 font-GilroyMedium"
+          style="
+            background-image: linear-gradient(
+              89.21deg,
+              rgb(38, 60, 135) 10.58%,
+              rgb(1, 176, 85) 93.7%
+            );
+          "
+        >
+          Ưu điểm của gói vay VPBank
+        </h2>
+      </div>
+      <div
+        class="advantage-content flex justify-between items-center 900:max-w-[1115px] max-900:max-w-full m-auto relative"
+      >
+        <div
+          class="list-advantage h-[730px] mt-[50px] flex items-start 480:pl-[32px] max-480:gap-[10px] max-480:px-[15px] max-900:min-w-full 480:flex-col justify-center flex-wrap 480:items-center"
+        >
+          <div
+            class="advantage-item w-[240px] h-[210px] 480:w-[208px] 480:h-[210px] 480:mr-[16px] max-480:mr-0 480:pl-[20px] max-480:pl-[10px] max-480:mb-[10px] max-480:rounded-tr-[5px] max-480:rounded-br-[5px] max-480:w-[calc(50%-5px)] shadow-[0px_10px_40px_rgba(0,_0,_0,_0.15),inset_0px_4px_0px_#67C090] pl-[32px] mr-[30px] mb-[32px] rounded-br-[10px] rounded-tr-[10px]"
+            style="
+              background: linear-gradient(
+                142.43deg,
+                #ffffff 46.38%,
+                #fcfcfc 54.93%
+              );
+            "
+          >
+            <img
+              src="https://vayonline.vpbank.com.vn/images/0a2cb7b474d25130f4e4c96f411246f5.svg"
+              class="w-[40px] h-[40px] mt-[40px]"
+              alt=""
+            />
+            <p
+              class="advantage-item-title text-[#25282B] text-[16px] mt-[24px] leading-[17px] uppercase font-[900] font-GilroyMedium max-480:text-[14px]"
+            >
+              THỦ TỤC VAY
+            </p>
+            <p
+              class="advantage-item-sub-title text-[#52575C] text-[14px] font-GilroyLine leading-[20px] pt-[23px] max-480:pt-[8px] max-480:text-[12px]"
+            >
+              Thời gian phê duyệt hồ sơ & giải ngân nhanh
+            </p>
+          </div>
+          <div
+            class="advantage-item w-[240px] h-[210px] 480:w-[208px] 480:h-[210px] 480:mr-[16px] max-480:mr-0 480:pl-[20px] max-480:pl-[10px] max-480:mb-[10px] max-480:rounded-tr-[5px] max-480:rounded-br-[5px] max-480:w-[calc(50%-5px)] shadow-[0px_10px_40px_rgba(0,_0,_0,_0.15),inset_0px_4px_0px_#67C090] pl-[32px] mr-[30px] mb-[32px] rounded-br-[10px] rounded-tr-[10px]"
+            style="
+              background: linear-gradient(
+                142.43deg,
+                #ffffff 46.38%,
+                #fcfcfc 54.93%
+              );
+            "
+          >
+            <img
+              src="https://vayonline.vpbank.com.vn/images/f4b449b56b54826d3d20012e3f81fe56.svg"
+              class="w-[40px] h-[40px] mt-[40px]"
+              alt=""
+            />
+            <p
+              class="advantage-item-title text-[#25282B] text-[16px] mt-[24px] leading-[17px] uppercase font-[900] font-GilroyMedium max-480:text-[14px]"
+            >
+              KHOẢN VAY
+            </p>
+            <p
+              class="advantage-item-sub-title text-[#52575C] text-[14px] font-GilroyLine leading-[20px] pt-[23px] max-480:pt-[8px] max-480:text-[12px]"
+            >
+              Lên đến 200 triệu
+            </p>
+          </div>
+          <div
+            class="advantage-item w-[240px] h-[210px] 480:w-[208px] 480:h-[210px] 480:mr-[16px] max-480:mr-0 480:pl-[20px] max-480:pl-[10px] max-480:mb-[10px] max-480:rounded-tr-[5px] max-480:rounded-br-[5px] max-480:w-[calc(50%-5px)] shadow-[0px_10px_40px_rgba(0,_0,_0,_0.15),inset_0px_4px_0px_#67C090] pl-[32px] mr-[30px] mb-[32px] rounded-br-[10px] rounded-tr-[10px]"
+            style="
+              background: linear-gradient(
+                142.43deg,
+                #ffffff 46.38%,
+                #fcfcfc 54.93%
+              );
+            "
+          >
+            <img
+              src="https://vayonline.vpbank.com.vn/images/e9ec348ffafe3e52cad2453a62a9e7e9.svg"
+              class="w-[40px] h-[40px] mt-[40px]"
+              alt=""
+            />
+            <p
+              class="advantage-item-title text-[#25282B] text-[16px] mt-[24px] leading-[17px] uppercase font-[900] font-GilroyMedium max-480:text-[14px]"
+            >
+              CHỨNG MINH THU NHẬP
+            </p>
+            <p
+              class="advantage-item-sub-title text-[#52575C] text-[14px] font-GilroyLine leading-[20px] pt-[23px] max-480:pt-[8px] max-480:text-[12px]"
+            >
+              Không cần tài sản đảm bảo hay chứng minh thu nhập
+            </p>
+          </div>
+          <div
+            class="advantage-item w-[240px] h-[210px] 480:w-[208px] 480:h-[210px] 480:mr-[16px] max-480:mr-0 480:pl-[20px] max-480:pl-[10px] max-480:mb-[10px] max-480:rounded-tr-[5px] max-480:rounded-br-[5px] max-480:w-[calc(50%-5px)] shadow-[0px_10px_40px_rgba(0,_0,_0,_0.15),inset_0px_4px_0px_#67C090] pl-[32px] mr-[30px] mb-[32px] rounded-br-[10px] rounded-tr-[10px]"
+            style="
+              background: linear-gradient(
+                142.43deg,
+                #ffffff 46.38%,
+                #fcfcfc 54.93%
+              );
+            "
+          >
+            <img
+              src="https://vayonline.vpbank.com.vn/images/1b997e6c1b49c10c70985b0957b1cb1e.svg"
+              class="w-[40px] h-[40px] mt-[40px]"
+              alt=""
+            />
+            <p
+              class="advantage-item-title text-[#25282B] text-[16px] mt-[24px] leading-[17px] uppercase font-[900] font-GilroyMedium max-480:text-[14px]"
+            >
+              LÃI SUẤT VAY
+            </p>
+            <p
+              class="advantage-item-sub-title text-[#52575C] text-[14px] font-GilroyLine leading-[20px] pt-[23px] max-480:pt-[8px] max-480:text-[12px]"
+            >
+              Chỉ từ 1.2%/tháng
+            </p>
+          </div>
+          <div
+            class="advantage-item w-[240px] h-[210px] 480:w-[208px] 480:h-[210px] 480:mr-[16px] max-480:mr-0 480:pl-[20px] max-480:pl-[10px] max-480:mb-[10px] max-480:rounded-tr-[5px] max-480:rounded-br-[5px] max-480:w-[calc(50%-5px)] shadow-[0px_10px_40px_rgba(0,_0,_0,_0.15),inset_0px_4px_0px_#67C090] pl-[32px] mr-[30px] mb-[32px] rounded-br-[10px] rounded-tr-[10px]"
+            style="
+              background: linear-gradient(
+                142.43deg,
+                #ffffff 46.38%,
+                #fcfcfc 54.93%
+              );
+            "
+          >
+            <img
+              src="https://vayonline.vpbank.com.vn/images/ea230ef16c4c0b280fbf5b3c095be73f.svg"
+              class="w-[40px] h-[40px] mt-[40px]"
+              alt=""
+            />
+            <p
+              class="advantage-item-title text-[#25282B] text-[16px] mt-[24px] leading-[17px] uppercase font-[900] font-GilroyMedium max-480:text-[14px]"
+            >
+              KỲ HẠN VAY
+            </p>
+            <p
+              class="advantage-item-sub-title text-[#52575C] text-[14px] font-GilroyLine leading-[20px] pt-[23px] max-480:pt-[8px] max-480:text-[12px]"
+            >
+              Lên đến 60 tháng
+            </p>
+          </div>
+        </div>
+        <img
+          class="absolute 1050:right-[-32px] 1000:right-[-85px] 960:right-[-125px] 900:right-[-175px] max-900:hidden w-[553px] 100 bottom-0 h-[552px]"
+          src="https://vayonline.vpbank.com.vn/images/52940a5c70293d280ccf093ec7f4634c.svg"
+          alt=""
+        />
+      </div>
+    </section>
+    <section
+      class="section-question 900:w-[772px] max-900:w-auto m-auto mt-[28px] 480:px-[24px] max-480:px-[15px]"
+    >
+      <h2
+        class="question-title 480:text-[32px] max-390:text-[20px] max-390:font-GilroyBold 390:text-[24px] leading-[47px] text-center font-bold bg-gradient-to-r from-blue-600 via-transparent to-green-400 text-transparent bg-clip-text font-GilroyMedium"
+        style="
+          background-image: linear-gradient(
+            89.21deg,
+            rgb(38, 60, 135) 10.58%,
+            rgb(1, 176, 85) 93.7%
+          );
+        "
+      >
+        CÁC CÂU HỎI THƯỜNG GẶP
+      </h2>
+      <div class="question-content mt-[24px]">
+        <div
+          (click)="showQuestionContent($event, 0)"
+          class="question-item font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Vay tín chấp là gì? Lãi suất, thời hạn và cách trả nợ khi vay
+                tín chấp tại VPBank là bao nhiêu?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Vay tín chấp là hình thức cho vay không cần tài sản đảm bảo
+                (TSĐB), dựa hoàn toàn vào uy tín của khách hàng (KH) về năng lực
+                trả nợ, để phục vụ cho nhu cầu tiêu dùng cá nhân.
+              </span>
+              <br />
+              <br />
+              <span>
+                Lãi suất vay từ 16% đến 38%/năm tùy thuộc vào các yếu tố khác
+                nhau và được tính trên dư nợ giảm dần, thời hạn vay từ 12 – 60
+                tháng. Bạn vui lòng liên hệ với nhân viên của VPBank để được tư
+                vấn mức lãi suất cụ thể.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 1)"
+          class="question-item font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Thủ tục vay online bao gồm gì ?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >KH cần cung cấp hồ sơ theo quy định của VPBank, bao gồm:<br />
+                + Hồ sơ chứng minh nhân thân (CMND/Hộ chiếu/Căn cước công
+                dân…)<br />
+                + Hồ sơ chứng minh nơi cư trú (Hộ khẩu/Bằng lái xe…)<br />
+                + Hồ sơ chứng minh công việc (HĐLĐ/Quyết định biên chế/Xác nhận
+                nhân sự…)<br />
+                + Hồ sơ chứng minh thu nhập (Sao kê lương/Xác nhận lương/bảng
+                lương…)<br />
+                <br />
+                Nhân viên VPBank sẽ tư vấn cụ thể cho KH.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 2)"
+          class="question-item font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Đăng ký trên vayonline mang lại lợi ích gì ?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Bạn không cần phải tới ngân hàng, và chỉ khi hồ sơ được phê
+                duyệt bạn mới cần ký hồ sơ. Yêu cầu vay vốn của bạn được tiếp
+                nhận và phản hồi ngay trong ngày. Thời gian xử lý hồ sơ nhanh
+                hơn nhiều so với việc bạn tự tới ngân hàng để vay.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 3)"
+          class="question-item font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Các loại phí có thể phát sinh khi vay tín chấp tại VPBank?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Phí bảo hiểm khoản vay:<br />
+                + Mục đích: bảo hiểm cho khoản vay tín chấp tại VPBank, trong
+                trường hợp xảy ra rủi ro KH không có khả năng trả nợ (tử vong
+                hoặc thương tật toàn bộ vĩnh viễn), công ty bảo hiểm sẽ đứng ra
+                chi trả toàn bộ dư nợ còn lại của KH cho VPBank.<br />
+                + Mức phí: 1,2 – 1,5%/năm tính trên dư nợ giảm dần, VPBank sẽ
+                tính tổng số tiền bảo hiểm của KH trong suốt thời hạn vay và thu
+                toàn bộ số tiền này tại thời điểm giải ngân.<br />
+                <br />
+                Phí phạt trả nợ trước hạn<br />
+                + Nội dung: KH tất toán trước hạn sẽ chịu phí phạt trả nợ trước
+                hạn.<br />
+                + Mức phí:<br />
+                *Nếu thời gian vay thực tế đến 12 tháng: Phí trả nợ trước hạn
+                được tính bằng 4% nhân (x) số tiền trả nợ trước hạn, tối thiểu
+                là 1.000.000 đồng.<br />
+                *Nếu thời gian vay thực tế trên 12 tháng: Phí trả nợ trước hạn
+                được tính bằng 3 % nhân (x) số tiền trả nợ trước hạn, tối thiểu
+                là 600.000 đồng.<br />
+                <br />
+                Phí trả nợ trước hạn được áp dụng trong trường hợp Khách hàng
+                trả nợ trước hạn toàn bộ hoặc một phần dư nợ khoản vay của Khách
+                hàng.<br />
+                Một năm được hiểu là 365 ngày.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 4)"
+          class="question-item font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Nếu tôi thanh toán nợ chậm trễ, hoặc không thanh toán thì sẽ như
+                thế nào?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Nếu bạn thanh toán nợ chậm trễ hoặc không thanh toán, khoản vay
+                của bạn sẽ bị chuyển thành nợ quá hạn, ảnh hưởng đến uy tín,
+                lịch sử tín dụng của KH. Ngoài ra, đối với phần gốc và lãi quá
+                hạn, bạn sẽ phải chịu lãi suất bằng 150% mức lãi suất trong
+                hạn:<br />
+                + Lãi suất cho vay áp dụng đối với dư nợ gốc quá hạn (lãi suất
+                quá hạn): Bằng 150% mức lãi suất cho vay trong hạn áp dụng tại
+                thời điểm chuyển nợ quá hạn.<br />
+                + Lãi suất chậm trả áp dụng đối với tiền lãi chậm trả: Bằng 150%
+                lãi suất cho vay trong hạn áp dụng tại thời điểm chậm trả lãi
+                nhưng tối đa không quá 10%/năm tính trên số dư lãi chậm trả
+                tương ứng với thời gian chậm trả.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 5)"
+          class="question-item hidden font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Tôi phải làm gì để biết dư nợ của khoản vay tín chấp của tôi ở
+                VPBank còn bao nhiêu?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Bạn có thể gọi điện đến tổng đài của VPBank theo số 1900545415
+                để được hỗ trợ kiểm tra dư nợ khoản vay tín chấp tại
+                VPBank.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 6)"
+          class="question-item hidden font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Tôi chỉ vay tín chấp vậy có phải trong mọi trường hợp sẽ không
+                phát sinh tài sản thế chấp hay không?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Đúng. Khoản vay tín chấp sẽ không phát sinh tài sản thế chấp
+                trong mọi trường hợp.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 7)"
+          class="question-item hidden font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Khi tôi có nhu cầu cơ cấu lại khoản vay tín chấp tại VPBank (kéo
+                dài kỳ hạn) ngân hàng có giải quyết cho tôi không?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >+ Trước ngày đến hạn của các Kỳ trả nợ gốc và/hoặc lãi ít nhất
+                là 10 (mười) ngày, nếu Khách hàng do gặp khó khăn tạm thời dẫn
+                đến không có khả năng trả nợ đúng hạn, Khách hàng có thể gửi văn
+                bản đề nghị VPBank xem xét cơ cấu lại thời hạn trả nợ.<br />
+                + VPBank trên cơ sở xem xét khả năng tài chính của mình và kết
+                quả đánh giá khả năng trả nợ của Khách hàng có quyền chấp nhận
+                hoặc không chấp nhận đề nghị cơ cấu lại thời hạn trả nợ của
+                Khách hàng.<br />
+                + Thỏa thuận cơ cấu lại thời hạn trả nợ chỉ có giá trị khi được
+                lập thành văn bản có chữ ký của người có thẩm quyền của Các Bên.
+              </span>
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 8)"
+          class="question-item hidden font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Khoản vay tín chấp của tôi có tự động gia hạn không (tiếp tục
+                một kỳ hạn mới khi đến hạn)?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Khoản vay tín chấp không tự động gia hạn khi đến hạn. Nếu tại
+                thời điểm hết hạn khoản vay tín chấp KH có nhu cầu tiếp tục vay,
+                có thể liên hệ với nhân viên VPBank để được hỗ trợ.</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 9)"
+          class="question-item hidden font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header border-b border-dashed border-[rgb(205,205,205)] py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Tôi đang có khoản vay tín chấp tại VPBank, tôi có thể vay thêm
+                một khoản tín chấp nữa tại VPBank không??
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Một KH có thể có nhiều khoản vay tín chấp tại VPBank. Nếu khả
+                năng tài chính của bạn đáp ứng được nghĩa vụ trả nợ hàng tháng,
+                bạn hoàn toàn có thể vay thêm các khoản tín chấp khác tại
+                VPBank</span
+              >
+            </div>
+          </div>
+        </div>
+        <div
+          (click)="showQuestionContent($event, 10)"
+          class="question-item hidden font-question-text overflow-y-hidden min-h-[64px]"
+        >
+          <div class="question-item-header-wrap relative flex items-center">
+            <div
+              class="question-item-header py-[24px] 480:ml-[40px] max-480:ml-[30px] 600:mr-[16px] grow"
+            >
+              <img
+                class="question-img top-[32%] left-0 absolute"
+                src="https://vayonline.vpbank.com.vn/images/a55b05a19c720efa5e026b8de5a75471.svg"
+                alt=""
+              />
+              <p class="text-[14px] leading-[24px] max-480:text-[13px]">
+                Tôi đang có khoản vay tín chấp tại các tổ chức tín dụng khác,
+                tôi có thể vay thêm một khoản tín chấp nữa tại VPBank không?
+              </p>
+            </div>
+            <div class="des-arow p-[12px]">
+              <img
+                class="min-h-[16px] min-w-[8px] rotate-[90deg]"
+                src="https://vayonline.vpbank.com.vn/images/53b21d4c96a92918a082249c2cb49df7.svg"
+                alt=""
+              />
+            </div>
+          </div>
+          <div
+            class="question-item-content-wrap transition-all duration-500 hidden 480:ml-[40px] max-480:ml-[24px] mr-[24px] border-b border-dashed border-[rgb(205,205,205)]"
+          >
+            <div
+              class="question-item-content bg-[rgb(239,249,255)] text-black text-[14px] p-[24px] mb-[24px] max-480:text-[13px]"
+            >
+              Trả lời: <br />
+              <span
+                >Bạn vẫn có thể vay thêm các khoản tín chấp tại VPBank nếu khả
+                năng tài chính của bạn đáp ứng được nghĩa vụ trả nợ hàng
+                tháng.</span
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="wrap-btn-ques text-center">
+        <button
+          (click)="showQuestion()"
+          class="btn-ques 480:w-[260px] bg-white 480:h-[50px] 480:text-[20px] 390:w-[240px] 390:text-[18px] 390:h-[40px] max-390:text-[16px] max-390:w-[200px] max-390:h-[40px] mt-[14px] leading-[21px] mb-[60px] border border-[#4F4F4F] font-GilroyLine text-[#4F4F4F] m-auto rounded-[100px]"
+          type="button"
+        >
+          XEM THÊM
+        </button>
+      </div>
+    </section>
+    <section class="section-review min-h-[457px] max-480:mb-[100px]">
+      <div class="max-w-[1050px] m-auto">
+        <div class="advantage-title uppercase m-auto">
+          <h2
+            class="m-auto 1050:w-[570px] font-GilroyMedium text-[40px] bg-clip-text text-center font-[600] 480:text-[32px] max-390:text-[20px] max-390:font-GilroyBold 390:text-[24px] leading-[62px] text-transparent bg-gradient-to-r from-blue-600 via-transparent to-green-400"
+            style="
+              background-image: linear-gradient(
+                89.21deg,
+                rgb(38, 60, 135) 10.58%,
+                rgb(1, 176, 85) 93.7%
+              );
+            "
+          >
+            NHẬN XÉT CỦA KHÁCH HÀNG
+          </h2>
+        </div>
+        <div class="wrapper m-auto mt-[56px] max-480:px-[15px]">
+          <owl-carousel-o [options]="customOptions">
+            <ng-container>
+              <ng-template class="slide" carouselSlide>
+                <div
+                  class="slider-wrap max-w-[570px] 480:min-h-[350px] max-480:min-h-[100px] m-auto"
+                >
+                  <div class="review-content-header text-center">
+                    <img
+                      class="border-[8px] m-auto !w-[124px] !h-[124px] border-white rounded-[100px] mb-[24px]"
+                      src="https://vayonline.vpbank.com.vn/images/a1268cd6d048d910a031392c7edf59a6.svg"
+                      alt=""
+                    />
+                    <p class="text-[16px]">
+                      Anh
+                      <span class="text-[#249675] text-[16px] font-GilroyBold"
+                        >Nguyễn Huy Đông</span
+                      >
+                    </p>
+                    <span
+                      class="font-GilroyLineItalic text-[16px] text-[#000000]"
+                      >Hồ Chí Minh</span
+                    >
+                  </div>
+                  <div
+                    class="review-content mt-[42px] max-480:mt-[20px] text-justify mb-[10px]"
+                  >
+                    <p
+                      class="font-GilroyLine text-[16px] text-[#000000] max-480:text-[12px]"
+                    >
+                      Với sản phẩm này, nhu cầu tiền mặt được hỗ trợ cực kỳ hiệu
+                      quả và nhanh chóng mà không cần tới ngân hàng hay thế chấp
+                      tài sản.
+                    </p>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template class="slide" carouselSlide>
+                <div
+                  class="slider-wrap max-w-[570px] 480:min-h-[350px] max-480:min-h-[100px] m-auto"
+                >
+                  <div class="review-content-header text-center">
+                    <img
+                      class="border-[8px] m-auto !w-[124px] !h-[124px] border-white rounded-[100px] mb-[24px]"
+                      src="https://vayonline.vpbank.com.vn/images/66ec0b8bc23e68074e866dc4f33d4e56.svg"
+                      alt=""
+                    />
+                    <p class="text-[16px]">
+                      Chị
+                      <span class="text-[#249675] text-[16px] font-GilroyBold"
+                        >Bùi Thị Lương</span
+                      >
+                    </p>
+                    <span
+                      class="font-GilroyLineItalic text-[16px] text-[#000000]"
+                      >Hà Nội</span
+                    >
+                  </div>
+                  <div
+                    class="review-content mt-[42px] max-480:mt-[20px] text-justify mb-[10px]"
+                  >
+                    <p
+                      class="font-GilroyLine text-[16px] text-[#000000] max-480:text-[12px]"
+                    >
+                      Với người bận rộn như tôi, việc tới ngân hàng để giao dịch
+                      vay vốn trong giờ hành chính là việc rất khó. Với VPBank,
+                      vấn đề này đã được giải quyết. Tôi vote 5* cho VPBank.
+                    </p>
+                  </div>
+                </div>
+              </ng-template>
+              <ng-template class="slide" carouselSlide>
+                <div
+                  class="slider-wrap max-w-[570px] 480:min-h-[350px] max-480:min-h-[100px] m-auto"
+                >
+                  <div class="review-content-header text-center">
+                    <img
+                      class="border-[8px] m-auto !w-[124px] !h-[124px] border-white rounded-[100px] mb-[24px]"
+                      src="https://vayonline.vpbank.com.vn/images/06f176ebadba5f011abbca4ed03f61f8.svg"
+                      alt=""
+                    />
+                    <p class="text-[16px]">
+                      Anh
+                      <span class="text-[#249675] text-[16px] font-GilroyBold"
+                        >Lê Minh Tú</span
+                      >
+                    </p>
+                    <span
+                      class="font-GilroyLineItalic text-[16px] text-[#000000]"
+                      >Đà Nẵng</span
+                    >
+                  </div>
+                  <div
+                    class="review-content mt-[42px] max-480:mt-[20px] text-justify mb-[10px]"
+                  >
+                    <p
+                      class="font-GilroyLine text-[16px] text-[#000000] max-480:text-[12px]"
+                    >
+                      Là một người làm chuyên về công nghệ, tôi đánh giá cao sản
+                      phẩm này. Trong thời đại hiện nay, việc ngồi tại nhà và
+                      đăng ký vay trực tuyến như sản phẩm này là một xu thế tất
+                      yếu.
+                    </p>
+                  </div>
+                </div>
+              </ng-template>
+            </ng-container>
+          </owl-carousel-o>
+        </div>
+      </div>
+    </section>
+  </div>
+  <footer class="text-center">
+    <img
+      class="logo mx-auto 480:mt-[138px] max-480:mt-[30px] 480:mb-[60px] max-480:mb-[20px] max-600:h-[32px] max-600:mb-[30px]"
+      src="https://vayonline.vpbank.com.vn/images/7325bfc8cf33275ad55eb47d1e0ae245.png"
+      alt=""
+    />
+    <div
+      class="info flex max-600:flex-col max-600:border-none max-w-[1050px] border-y border-[afafaf75] items-center justify-between m-auto py-[8px] max-600:px-[10px]"
+    >
+      <div class="info-left w-[50%] max-600:w-full">
+        <div
+          class="info-left-item flex items-center text-[rgb(255,255,255)] justify-start 480:mb-[26px] max-480:mb-[15px]"
+        >
+          <img
+            class="w-[20px] h-[20px] mr-[1rem]"
+            src="https://vayonline.vpbank.com.vn/images/f2de540491eca110e5dd6f7b6df20663.svg"
+            alt=""
+          />
+          <span class="text-[14px] font-GilroyLine leading-[28px]">
+            89 Lang Ha str, Dong Da dist, Ha Noi
+          </span>
+        </div>
+        <div
+          class="info-left-item flex items-center text-[rgb(255,255,255)] justify-start 480:mb-[26px] max-480:mb-[15px]"
+        >
+          <img
+            class="w-[20px] h-[20px] mr-[1rem]"
+            src="	https://vayonline.vpbank.com.vn/images/a330c226928a9b2b05e87c80fb5527f4.svg"
+            alt=""
+          />
+          <span class="text-[14px] font-GilroyLine leading-[28px]">
+            1900545415
+          </span>
+        </div>
+      </div>
+      <div
+        class="info-tight w-[50%] max-600:w-full 600:border-l border-[#afafaf75] 600:grid items-center justify-center"
+      >
+        <div
+          class="info-left-item flex items-center text-[rgb(255,255,255)] 480:mb-[26px] max-480:mb-[15px]"
+        >
+          <img
+            class="w-[20px] h-[20px] mr-[1rem]"
+            src="https://vayonline.vpbank.com.vn/images/74671d78de9d3f9c10557097f132fa6d.svg
+                 "
+            alt=""
+          />
+          <span class="text-[14px] font-GilroyLine leading-[28px]">
+            customercare@vpbank.com.vn
+          </span>
+        </div>
+        <div
+          class="info-left-item flex items-center text-[rgb(255,255,255)] 480:mb-[26px] max-480:mb-[15px]"
+        >
+          <img
+            class="w-[20px] h-[20px] mr-[1rem]"
+            src="	https://vayonline.vpbank.com.vn/images/c555752cb30bbb3a9af39e97bd380726.svg
+                 "
+            alt=""
+          />
+          <span class="text-[14px] font-GilroyLine leading-[28px]">
+            https://VPBank.com.vn
+          </span>
+        </div>
+      </div>
+    </div>
+    <div
+      class="copyright text-center text-white font-GilroyLine 480:mt-[35px] leading-[24px]"
+    >
+      © 2022. All rights reserved by VPBank
+    </div>
+  </footer>
+</main>

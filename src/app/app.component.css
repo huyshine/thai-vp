@@ -1,0 +1,6 @@
+.active {
+  @apply h-[72px] ;
+}
+.quang{
+  border-bottom: 1px dashed;
+}

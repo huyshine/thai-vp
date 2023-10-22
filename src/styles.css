@@ -1,0 +1,83 @@
+/* You can add global styles to this file, and also import other style files */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+ @font-face {
+    font-family: 'GilroyRegular';
+    src: url('./font/SVN-Gilroy Regular.otf')
+ }
+ @font-face {
+    font-family: 'GilroyLine';
+    src: url('./font/SVN-Gilroy Light.otf')
+ }
+ @font-face {
+   font-family: 'GilroyLineItalic';
+   src: url('./font/SVN-Gilroy Light Italic.otf')
+}
+ @font-face {
+    font-family: 'GilroyBold';
+    src: url('./font/SVN-Gilroy Bold.otf')
+ }
+
+ @font-face {
+    font-family: 'GilroyMedium';
+    src: url('./font/SVN-Gilroy Medium.otf')
+ }
+ body{
+    font-family:GilroyRegular;
+    color:#4d4d4d;
+    font-size:14px;
+ }
+ .owl-prev{
+   position: absolute!important;
+   left:5px!important;
+   top:calc(50% - 70px)!important;
+   background: rgb(255, 255, 255)!important;
+   border-radius:100%!important;
+   background-image: url('https://vayonline.vpbank.com.vn/images/adba733cbc456274d3a75323af06586c.svg')!important;
+   background-repeat: no-repeat!important;
+   background-position: center!important;
+   color: rgb(0, 0, 0)!important;
+   width: 36.5px!important;
+   height: 36.5px;
+
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px!important;
+ }
+ .owl-next{
+   position: absolute!important;
+   right:5px!important;
+   top:calc(50% - 70px)!important;
+   background: rgb(255, 255, 255)!important;
+   border-radius:100%!important;
+   background-image: url('https://vayonline.vpbank.com.vn/images/e905e79855d2db6c8cdb34fbd3594a8b.svg')!important;
+   background-repeat: no-repeat!important;
+   background-position: center!important;
+   color: rgb(0, 0, 0)!important;
+   width: 36.5px!important;
+   height: 36.5px;
+
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px!important;
+ }
+ .owl-next {
+   background-color: #ff0000; /* Màu nền */
+   color: #ffffff; /* Màu chữ */
+   border-radius: 5px; /* Bo góc */
+   /* Các thuộc tính CSS khác */
+ }
+ .owl-theme .owl-dots .owl-dot span{
+   color: rgb(255, 255, 255)!important;
+   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 8px!important;
+   background-color: rgb(255, 255, 255)!important;
+   height: 15.2083px!important;
+   width: 15.2083px!important;
+ }
+ .owl-theme .owl-dots .owl-dot.active span, .owl-theme .owl-dots .owl-dot:hover span{
+   color: rgb(38, 144, 121)!important;
+   background-color: rgb(38, 144, 121)!important;
+ }
+ .owl-carousel{
+  position:relative !important;
+  min-height:390px!important;
+ }
